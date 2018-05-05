@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="../../assets/js/jquery-3.1.0.min.js"></script>
+<style>
+button { width:100px; height:40px; margin-bottom:15px;}
+</style>
+</head>
+<body>
+<h2>Html</h2>
+<button id="html">HTML</button>
+<div id="div1"></div>
+<h2>JSON</h2>
+<button id="json">JSON</button>
+<div id="div2"></div>
+<h2>XML</h2>
+<button id="xml">XML</button>
+<div id="div3"></div>
+<script>
+//Html
+$("#html").click(function(){  
+   $("#div1").load('fragment.html');  
+   return false;  
+});
+
+//JSON
+$("#json").click(function(){  
+	$.getJSON('test.json',function(data){  
+		var html = '<table>';  
+		$.each(data,function(entryIndex,entry){  
+			html += '<tr><td>'+entry.name+'</td><td>'+entry.age+'</td>';  
+			if(entry.hobby){  
+				html += '<td>';  
+				$.each(entry.hobby, function(lineindex,line) {  
+					html += line+",";  
+				});  
+				html += '</td>';  
+			}  
+
+			html += '</tr>';  
+		});  
+		html += '</table>';  
+		$("#div2").html(html);
+		return false;  
+    });  
+});  
+
+//XML
+$("#xml").click(function(){  
+     $.get('test.xml',function(data){  
+        var s="";  
+        $(data).find('book').each(function(i){  
+           var id=$(this).attr('id');  
+           var name=$(this).children('name').text();  
+           var author=$(this).children('author').text();  
+           var price=$(this).children('price').text();  
+           s+=id+"    "+name+"    "+author+"    "+price+"<br>";  
+        });  
+        $('#div3').html(s);  
+     });  
+});  
+</script>
+</body>
+</html>

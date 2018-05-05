@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>观数</title>
+<meta name="description" content=" " />
+<meta name="Keywords" content=" " />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="index, follow" />
+<meta name="distribution" content="global" />
+<meta name="rating" content="General" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="location" content="CA, BC, Vancouver" />
+<meta name="googlebot" content="index, follow" />
+<meta name="revisit-after" content="7 days" />
+<meta name="resource-type" content="document" />
+<meta name="classification" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+<div id="wrapper">
+<div id="banner">
+  <div id="header">
+    <div class="container">
+      <div class="ct-lt"><a href="javascript:void(0)" id="logo-guanshu"><img class="img-responsive" src="image/logo-guanshu.png" alt="观数"/></a></div>
+      <div class="ct-rt"><a href="#productConcept">产品理念</a><a href="http://form.mikecrm.com/z21g0S">联系我们</a></div>
+    </div>
+  </div>
+  <div class="content">
+    <h1>新一代大数据分析与商业智能产品</h1>
+    <p>Pervasive Data Intelligence</p>
+    <p>无所不在的数据智能</p>
+  </div>
+</div>
+<div id="main">
+  <div id="productConcept" class="container">
+    <h2>产品理念</h2>
+    <dl class="business">
+      <dt><img class="img-responsive" src="image/icon-business.png" alt="业务实时可视"/></dt>
+      <dd>
+        <p>业务实时可视</p>
+        <p>超越工具价值</p>
+      </dd>
+    </dl>
+    <dl class="easyUse">
+      <dt><img class="img-responsive" src="image/icon-easyUse.png" alt="极致易用"/></dt>
+      <dd>
+        <p>极致易用</p>
+        <p>人人都是数据分析师</p>
+      </dd>
+    </dl>
+    <dl class="multidata">
+      <dt><img class="img-responsive" src="image/icon-multidata.png" alt="多数据源支持"/></dt>
+      <dd>
+        <p>多数据源支持</p>
+        <p>全网海量大数据</p>
+      </dd>
+    </dl>
+    <dl class="cooperation">
+      <dt><img class="img-responsive" src="image/icon-cooperation.png" alt="内外部协作"/></dt>
+      <dd>
+        <p>内外部协作</p>
+        <p>完美支持业务场景</p>
+      </dd>
+    </dl>
+    <dl class="mobile">
+      <dt><img class="img-responsive" src="image/icon-mobile.png" alt="移动互联网化"/></dt>
+      <dd>
+        <p>移动互联网化</p>
+        <p>随时随地移动决策</p>
+      </dd>
+    </dl>
+  </div>
+  <div id="comingSoon">
+    <div class="container">
+      <div class="ct-lt">
+        <h2>敬请期待...</h2>
+        <div class="tc clearfix"> <a class="contactUs" href="http://form.mikecrm.com/z21g0S">点击联系试用</a> </div>
+      </div>
+      <div class="ct-rt"> <img class="img-responsive" src="image/bg-pc.png" alt="敬请期待..."/> </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="container">观数 @2016 杭州</div>
+</div>
+<script type="text/javascript" src="../assets/js/jquery-3.1.0.min.js"></script> 
+<script type="text/javascript">
+function resetBanner(){
+   var windowH = $(window).height();
+   var windowW = $(window).width();
+   //alert(windowW);
+   $("#banner").height(windowH);
+   var contentH = $(".content").height();
+   var contentW = $(".content").width();
+   //alert(contentW);
+   $(".content").css({
+	   'left':windowW/2 - contentW/2,
+	   'top':windowH/2 - contentH/2-20
+	   });
+}
+resetBanner();
+$(window).resize(function(){
+	resetBanner();
+	});
+</script>
+</body>
+</html>

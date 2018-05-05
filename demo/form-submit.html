@@ -1,0 +1,59 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+	<title>submit</title>
+</head>
+<body>
+	<h1>本demo演示在文本框中按enter键是否触发提交表单</h1>
+	<h2>默认情况下，一个文本框的时候，提交，不管按钮type是submit还是button</h2>
+	<form action="http://alvinwp.com/">
+		<input type="text">
+		<input type="button" value="提交">
+	</form>
+	<h2>一个文本框的时候怎么才能做到不提交，方法是加一个隐藏掉的文本框</h2>
+	<form action="http://alvinwp.com/">
+		<input type="text">
+		<input type="text" style="display:none">
+		<input type="button" value="提交">
+	</form>
+	<h2>只要有type为submit的按钮存在，一个文本框还是多个文本框都提交</h2>
+	<form action="http://alvinwp.com/">
+		<input type="text">
+		<input type="submit" value="提交">
+	</form>
+	<h2>只要有type为submit的按钮存在，一个文本框还是多个文本框都提交</h2>
+	<form action="http://alvinwp.com/">
+		<input type="text">
+		<input type="text">
+		<input type="submit" value="提交">
+	</form>
+	<h2>多个文本框的时候，不提交，用type为button的按钮就行啦</h2>
+	<form action="http://alvinwp.com/">
+		<input type="text">
+		<input type="text">
+		<input type="button" value="提交">
+	</form>
+	<h2>用button元素时，FX和IE下有不同的表现</h2>
+	<form action="http://alvinwp.com/">
+		<input type="text">
+		<input type="text">
+		<button>提交</button>
+	</form>
+	<h2>radio和checkbox在FX下也会触发提交表单，在IE下不会</h2>
+	<form action="http://alvinwp.com/">
+		<input type="text">
+		<input type="radio" name="a">
+		<input type="checkbox" name="b">
+		<input type="checkbox" name="c">
+		<input type="button" value="提交">
+	</form>
+	<h2>type为image的按钮，等同于type为submit的效果</h2>
+	<form action="http://alvinwp.com/">
+		<input type="text">
+		<input type="text">
+		<input type="image" src="http://k.kbcdn.com/images/common/logo_yahookoubei_s.gif">
+	</form>
+</body>
+</html>

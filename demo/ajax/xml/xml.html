@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="../../assets/js/jquery-3.1.0.min.js"></script>
+</head>
+
+<body>
+<form id="form1">
+    <select id="DropProvince" style="width:60px;">
+        <option>请选择</option>
+    </select>
+    <select id="sCity" style="width:60px;">
+    </select>
+</form>
+<script>
+$(document).ready(function() { 
+    $.ajax({ 
+       url: "City.xml", 
+       success: function (xml){ 
+          $(xml).find("province").each(function () { 
+              var t = $(this).attr("name"); 
+              $("#DropProvince").append("<option>" + t + "</option>"); 
+          });
+        }
+    });
+	
+	$("#DropProvince").change(function () { 
+		$("#sCity>option").remove(); 
+		var pname = $("#DropProvince").val(); 
+		$.ajax({ 
+		   url: "City.xml", 
+		   success: function(xml) { 
+			  $(xml).find("province[name='"+pname+"']>city").each(function(){ 
+				$("#sCity").append("<option>"+$(this).text()+"</option>"); 
+			  }); 
+		   } 
+	   });
+	});
+}); 
+</script>
+</body>
+</html>

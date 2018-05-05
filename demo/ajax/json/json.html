@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="../../assets/js/jquery-3.1.0.min.js"></script>
+</head>
+
+<body>
+<div>click to get json date</div>
+<input type="button" id="button" value="click" />
+<div id="result"></div>
+<script>
+/*$(document).ready(function(){ 
+    $('#button').click(function(){ 
+		$.ajax({ 
+		    type:"GET", 
+		    url:"music.txt", 
+		    dataType:"json",
+			beforeSend: function() {
+				alert(1);
+            },
+		    success:function(data){ 
+			   alert(2);
+		       var music="<ul>"; 
+		       //i表示在data中的索引位置，n表示包含的信息的对象 
+		       $.each(data,function(i,n){ 
+		          //获取对象中属性为optionsValue的值 
+		           music+="<li>"+n["optionKey"]+"&nbsp;&nbsp;&nbsp;"+n["optionValue"]+"</li>"; 
+		       }); 
+		      music+="</ul>"; 
+		      $('#result').append(music); 
+		    },
+            complete: function() {
+				alert(3);
+           },
+             error: function() {
+				alert(4);
+           }
+	   }); 
+	  return false; 
+	}); 
+});*/
+//当然，也可以使用$.getJSON()方法，代码简洁一点：
+$(document).ready(function(){ 
+    $('#button').click(function(){ 
+       $.getJSON('music.txt',function(data){ 
+          var music="<ul>"; 
+          $.each(data,function(i,n){ 
+             music+="<li>"+n.optionValue+"</li>"; 
+          }); 
+         music+="</ul>"; 
+         $('#result').append(music); 
+       }); 
+      return false; 
+    }); 
+}); 
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /alvinwp/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /alvinwp/index.php [L]
+</IfModule>
+
+# 屏蔽xmlrpc.php文件的访问
+<Files xmlrpc.php>
+Order Deny,Allow
+Deny from all
+</Files>
+
+# protect xmlrpc
+<IfModule mod_alias.c>
+Redirect 301 /xmlrpc.php http://asvfbasjkbvjasbbuchunzai.com/haha.php
+</IfModule>
+
+
+# END WordPress
