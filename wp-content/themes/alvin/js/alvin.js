@@ -49,7 +49,7 @@ $(function(){
 		});
 //文章结构-两列变一列
     $("#unfold").click(function(){
-		$(".uk-width-large-4-5").toggleClass('unfold');
+		$(".uk-width-large-4-5, .uk-width-large-4-5 #index").toggleClass('unfold');
 		$(".uk-width-large-1-5").toggleClass('hidden');
 		});
 //让博客里的所有超链接都不被跟踪

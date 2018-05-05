@@ -2244,6 +2244,7 @@ text-shadow:none!important
 }
 #main { padding: 30px 0 30px; position: relative; z-index: 1 }
 #index { background: #fff; margin-bottom: 20px; margin-left: 20px; border-radius: 10px }
+#index.unfold { margin-left:0;}
 #index .h4, #index>h4 { padding: 15px 30px; border-bottom: 1px solid #EEE; box-shadow: 0 2px 5px -1px rgba(0,0,0,.05); background-image: linear-gradient(rgba(200,200,200,0), rgba(200,200,200,.12)); color: rgba(0,0,0,.4); margin: 0 0 20px; font-size: 16px; line-height: 25px }
 #index .uk-article { min-height: 20vh; padding: 30px 20px }
 #sidebar ul.ul { padding-left: 0; margin: 0 0 0 20px }
@@ -2724,17 +2725,15 @@ background-color:#44cef6
 }
 @media (min-width:768px) {
 #head { top: 45px !important; }
-#main { padding-top: 45px; width: 750px; }
+#main { padding-top: 45px; width: 95%; max-width:1200px; }
 /*左侧导航样式*/
 #op_head .uk-navbar-toggle { display: none; }
 #nav-top { display: block !important; }
 }
 @media (min-width:992px) {
-#main { width: 970px; }
+#main { width: 90%;}
 }
 @media (min-width:1200px) {
-#main { width: 1170px; }
 }
 @media (min-width:1600px) {
-#main { width: 1200px; }
 }
