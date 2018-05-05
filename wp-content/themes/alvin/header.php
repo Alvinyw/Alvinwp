@@ -18,7 +18,8 @@
 	<body <?php if(of_get('bgimg')){ echo 'style="background-image: url('.of_get('bgimg').');"'; }?>  class="uk-height-1-1">
 		
 		<?php C_qzhai(); ?>
-		<div id="main" class="wp uk-grid uk-grid-collapse" style="max-width:<?php wp_max_width(); ?>">
+        <!-- style="max-width:<?php wp_max_width(); ?>" -->
+		<div id="main" class="wp uk-grid uk-grid-collapse">
 			<?php div_head();?>
         	<?php add_action('description_qzhai', 'description_qzhai'); //头部副导航 ?>
 			<?php do_action('head_qzhai');?>

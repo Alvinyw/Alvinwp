@@ -2271,8 +2271,8 @@ text-shadow:none!important
 padding:.5rem 0; border-bottom: 1px solid #eee }
 #sidebar #wp-calendar tfoot td, #sidebar #wp-calendar tfoot th { border-bottom: none }
 #article .uk-article-meta i { display: inline-block; padding-right: 5px }
-#article p { font-size: 15px; line-height: 1.8em; color: rgba(0,0,0,.8); margin-top:10px; margin-bottom: 10px; letter-spacing: 1px }
-#article .singlenav li { margin-bottom:0; color: rgba(0,0,0,.5); font-size: 13px }
+#article p { font-size: 15px; line-height: 1.8em; color: rgba(0,0,0,.8); margin-top: 10px; margin-bottom: 10px; letter-spacing: 1px }
+#article .singlenav li { margin-bottom: 0; color: rgba(0,0,0,.5); font-size: 13px }
 #article .singlenav li a { color: rgba(0,0,0,.5); font-size: 13px }
 #list { padding: 0 30px 30px; min-height: 60vh }
 #list .article { padding-bottom: 30px }
@@ -2435,9 +2435,10 @@ margin-right:.5rem; border-radius: 100% }
 ---------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------*/
-* { letter-spacing:1px;}
-html { height:100%;}
-#main .thk { display:none; font-size: 12px; line-height: 20px; color: #aaa; }
+* { letter-spacing: 1px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+*:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+html { height: 100%; }
+#main .thk { display: none; font-size: 12px; line-height: 20px; color: #aaa; }
 .hidden { display: none; }
 .pr { position: relative; }
 .f14 { font-size: 14px; }
@@ -2456,11 +2457,11 @@ table { border-spacing: 0; border-collapse: collapse; }
 table td { padding: 10px; border: solid 1px #ccc; }
 .table-responsive { min-height: .01%; overflow-x: auto; }
 /*公用样式设置*/
-#content li { margin-bottom:13px;}
+#content li { margin-bottom: 13px; }
 /*目录样式*/
-#content .catalog li { margin:5px 0;}
+#content .catalog li { margin: 5px 0; }
 /* 左侧导航样式 */
-#head:before { content:''; display:block; width:35px; height:35px; position:absolute; left:0; top:-32px; background:url(../img/images/tree.png) no-repeat center bottom;}
+#head:before { content: ''; display: block; width: 35px; height: 35px; position: absolute; left: 0; top: -32px; background: url(../img/images/tree.png) no-repeat center bottom; }
 #main .uk-sticky-placeholder { height: auto !important; }
 #head>div>div>.uk-nav>li>a:hover { border-bottom-left-radius: 50px; border-top-right-radius: 50px; }
 #head>div>div>.uk-nav>li.uk-active>a { border-bottom-right-radius: 50px; border-top-left-radius: 50px; }
@@ -2524,8 +2525,8 @@ table td { padding: 10px; border: solid 1px #ccc; }
 .note { padding: 10px 12px; border: 1px solid #E6DB55; border-radius: 3px; background: #FFFFE0; font-size: 13px; line-height: 26px; }
 .note .red { font-weight: bold; }
 .red { color: red; }
-#content .note ul,#content .note ol { padding-left: 20px; margin: 0; }
-#content .note ul li,#content .note ol li { margin: 0; }
+#content .note ul, #content .note ol { padding-left: 20px; margin: 0; }
+#content .note ul li, #content .note ol li { margin: 0; }
 /*下雪插件（jq.snow.js）*/
 body { background: #ddd; }
 /*下雪插件开关*/
@@ -2610,7 +2611,7 @@ background-color: #44cef6;
 }
 #head .uk-panel .tx img { -webkit-animation-name: 'round'; /*动画名称*/ -webkit-animation-duration: 4s;/*播放一次所持续时间*/ -webkit-animation-timing-function: linear;/*动画播放频率*/ -webkit-animation-iteration-count: infinite;/*动画播放次数为无限次*/ box-shadow: 0 0 24px #bbb; }
 /*背景大图*/
-body { background: url(../img/images/background_image.jpg) no-repeat center center; background-size: cover; min-height:100%; height:auto !important; }
+body { background: url(../img/images/background_image.jpg) no-repeat center center; background-size: cover; min-height: 100%; height: auto !important; }
 /*摇曳的鲜花*/
 @keyframes ball-x { 0% {
 transform:rotate(0deg);
@@ -2723,12 +2724,17 @@ background-color:#44cef6
 }
 @media (min-width:768px) {
 #head { top: 45px !important; }
-#main { padding-top: 45px; }
+#main { padding-top: 45px; width: 750px; }
 /*左侧导航样式*/
 #op_head .uk-navbar-toggle { display: none; }
 #nav-top { display: block !important; }
 }
-@media (min-width:960px) {
+@media (min-width:992px) {
+#main { width: 970px; }
 }
-@media (min-width:1220px) {
+@media (min-width:1200px) {
+#main { width: 1170px; }
+}
+@media (min-width:1600px) {
+#main { width: 1200px; }
 }
