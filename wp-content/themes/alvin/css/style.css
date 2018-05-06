@@ -2199,14 +2199,14 @@ a:hover { color: #44cef6 }
 #head .uk-panel .uk-panel-title a:hover { text-decoration: none }
 #head .uk-panel .uk-panel-title:after { content: ''; position: absolute; bottom: -5px; left: 0; height: 1px; width: 100%; background: rgba(0,0,0,.4); transform: scaleX(1); -moz-transition: all .2s ease-in; -webkit-transition: all .2s ease-in; -o-transition: all .2s ease-in; -ms-transition: all .2s ease-in; transition: all .2s ease-in }
 #head .uk-panel>span { display: block; font-size: 12px; padding: 0 10px; margin: 10px 0 0 }
-#head .uk-panel .my { padding: 20px; font-size:14px; line-height:24px; color: rgba(0,0,0,.6) }
+#head .uk-panel .my { padding: 20px; font-size: 14px; line-height: 24px; color: rgba(0,0,0,.6) }
 #head .uk-panel .my>div { position: relative; -moz-transition: all .2s ease-in; -webkit-transition: all .2s ease-in; -o-transition: all .2s ease-in; -ms-transition: all .2s ease-in; transition: all .2s ease-in }
 #head .uk-panel .my>div>span { display: block }
 #head .uk-panel .my>div a { position: absolute; width: 100%; height: 100%; left: 0; top: 0 }
 #head .uk-panel .my>div:hover { font-size: 1.3em; color: #1685a9 }
 #head .uk-panel .my>div+div { border-left: 1px solid #eee }
 #head>div>div>.uk-nav>li { border-top: 1px solid #eee; position: relative }
-#head>div>div>.uk-nav>li>a { padding: 10px 0; font-size:4px; line-height:24px; color: #888; -moz-transition: all .2s ease-in; -webkit-transition: all .2s ease-in; -o-transition: all .2s ease-in; -ms-transition: all .2s ease-in; transition: all .2s ease-in }
+#head>div>div>.uk-nav>li>a { padding: 10px 0; font-size: 14px; line-height: 24px; color: #888; -moz-transition: all .2s ease-in; -webkit-transition: all .2s ease-in; -o-transition: all .2s ease-in; -ms-transition: all .2s ease-in; transition: all .2s ease-in }
 #head>div>div>.uk-nav>li>a:hover { background: #44cef6; color: #FFF!important; text-shadow: none!important }
 #head>div>div>.uk-nav>li>div { position: absolute; padding: 0; margin: 0 0 0 5px; border: none; border-radius: 10px; overflow: hidden; box-shadow: 0 0 0 1px rgba(0,0,0,.02), 0 4px 10px rgba(0,0,0,.06) }
 #head>div>div>.uk-nav>li>div>ul { padding: 0; margin: 0 }
@@ -2223,7 +2223,7 @@ a:hover { color: #44cef6 }
 #s_s #searchform .ace, #s_s #searchform input:focus { color: #fff!important; text-shadow: none!important; background: #343434 }
 #s_s .uk-nav-sub { padding: 0 }
 #s_s .uk-nav-sub a { padding: 10px 0 }
-#searchform { font-size:14px; line-height:24px; border-top: 1px solid #eee; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; overflow: hidden }
+#searchform { font-size: 14px; line-height: 24px; border-top: 1px solid #eee; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; overflow: hidden }
 #searchform input { border: none; border-radius: 0; text-align: center; height: 40px; color: #888!important }
 #searchform .ace, #searchform input:focus, #searchform input:hover { background: #44cef6; color: #fff!important; text-shadow: none!important }
 #searchform input:focus::-webkit-input-placeholder, #searchform input:hover::-webkit-input-placeholder {
@@ -2244,7 +2244,7 @@ text-shadow:none!important
 }
 #main { padding: 30px 0 30px; position: relative; z-index: 1 }
 #index { background: #fff; margin-bottom: 20px; margin-left: 20px; border-radius: 10px }
-#index.unfold { margin-left:0;}
+#index.unfold { margin-left: 0; }
 #index .h4, #index>h4 { padding: 15px 30px; border-bottom: 1px solid #EEE; box-shadow: 0 2px 5px -1px rgba(0,0,0,.05); background-image: linear-gradient(rgba(200,200,200,0), rgba(200,200,200,.12)); color: rgba(0,0,0,.4); margin: 0 0 20px; font-size: 16px; line-height: 25px }
 #index .uk-article { min-height: 20vh; padding: 30px 20px }
 #sidebar ul.ul { padding-left: 0; margin: 0 0 0 20px }
@@ -2438,7 +2438,7 @@ margin-right:.5rem; border-radius: 100% }
 -------------------------------------------------------------------------------------------------*/
 * { letter-spacing: 1px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-html { height: 100%; font-size:14px; line-height:24px; }
+html { height: 100%; font-size: 14px; line-height: 24px; }
 #main .thk { display: none; font-size: 12px; line-height: 20px; color: #aaa; }
 .hidden { display: none; }
 .pr { position: relative; }
@@ -2737,12 +2737,12 @@ background-color:#44cef6
 .uk-h4, h4 { font-size: 18px; line-height: 22px }
 .uk-h5, h5 { font-size: 14px; line-height: 20px }
 .uk-h6, h6 { font-size: 12px; line-height: 18px }
-html { font-size:16px; line-height:28px;}
-#main { width: 90%;}
+html { font-size: 16px; line-height: 28px; }
+#main { width: 90%; }
 }
 @media (min-width:1366px) {
-#main { max-width:1200px; }
+#main { max-width: 1200px; }
 }
 @media (min-width:1600px) {
-#main { max-width:1300px; }
+#main { max-width: 1300px; }
 }
