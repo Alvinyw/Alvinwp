@@ -24,12 +24,12 @@ address, blockquote, dl, fieldset, figure, ol, p, pre, ul { margin: 0 0 15px 0 }
 *+address, *+blockquote, *+dl, *+fieldset, *+figure, *+ol, *+p, *+pre, *+ul { margin-top: 15px }
 h1, h2, h3, h4, h5, h6 { margin: 0 0 15px 0; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 400; color: #444; text-transform: none }
 *+h1, *+h2, *+h3, *+h4, *+h5, *+h6 { margin-top: 30px }
-.uk-h1, h1 { font-size: 28px; line-height: 36px }
-.uk-h2, h2 { font-size: 24px; line-height: 28px }
-.uk-h3, h3 { font-size: 20px; line-height: 26px }
-.uk-h4, h4 { font-size: 16px; line-height: 22px }
-.uk-h5, h5 { font-size: 14px; line-height: 20px }
-.uk-h6, h6 { font-size: 12px; line-height: 18px }
+.uk-h1, h1 { font-size: 28px; line-height: 40px }
+.uk-h2, h2 { font-size: 24px; line-height: 36px }
+.uk-h3, h3 { font-size: 20px; line-height: 32px }
+.uk-h4, h4 { font-size: 16px; line-height: 28px }
+.uk-h5, h5 { font-size: 14px; line-height: 26px }
+.uk-h6, h6 { font-size: 12px; line-height: 24px }
 ol, ul { padding-left: 20px }
 ol>li>ol, ol>li>ul, ul>li>ol, ul>li>ul { margin: 0 }
 dt { font-weight: 700 }
@@ -2731,12 +2731,12 @@ background-color:#44cef6
 #nav-top { display: block !important; }
 }
 @media (min-width:992px) {
-.uk-h1, h1 { font-size: 32px; line-height: 42px }
-.uk-h2, h2 { font-size: 28px; line-height: 32px }
-.uk-h3, h3 { font-size: 22px; line-height: 28px }
-.uk-h4, h4 { font-size: 18px; line-height: 22px }
-.uk-h5, h5 { font-size: 14px; line-height: 20px }
-.uk-h6, h6 { font-size: 12px; line-height: 18px }
+.uk-h1, h1 { font-size: 32px; line-height: 44px }
+.uk-h2, h2 { font-size: 28px; line-height: 40px }
+.uk-h3, h3 { font-size: 24px; line-height: 36px }
+.uk-h4, h4 { font-size: 20px; line-height: 32px }
+.uk-h5, h5 { font-size: 16px; line-height: 28px }
+.uk-h6, h6 { font-size: 14px; line-height: 26px }
 html { font-size: 16px; line-height: 28px; }
 #main { width: 90%; max-width:960px; }
 }
