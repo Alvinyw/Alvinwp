@@ -261,3 +261,12 @@ function enqueue_scripts_styles_init() {
     wp_localize_script( 'ajax-script', 'WP_API_Settings', array( 'root' => esc_url_raw( rest_url() ), 'nonce' => wp_create_nonce( 'wp_rest' ) ) );
 }
 add_action('init', 'enqueue_scripts_styles_init');
+
+
+/*
+ * 让Wordpress摘要显示更多文字
+ */
+function emtx_excerpt_length( $length ) {
+    return 200;
+}
+add_filter( 'excerpt_length', 'emtx_excerpt_length' );

@@ -2280,7 +2280,7 @@ padding:.5rem 0; border-bottom: 1px solid #eee }
 #list .article>h1 { font-size: 24px; line-height: 30px; margin: 0 0 10px }
 #list .article>h1 a { color: #444 }
 #list .article>h1 a:hover { color: #1685a9; text-decoration: none }
-#list .article>p { font-size: 14px; margin: 0; color: #696969; line-height: 24px; letter-spacing: 1px }
+#list .article>p { margin: 0; color: #696969; letter-spacing: 1px }
 #list .article>p img { max-width: 180px; max-height: 120px; float: right; margin-left: 10px; margin-bottom: 10px }
 #list .article p:before { content: ""; display: table-cell }
 #list .article p:after { content: ""; display: table; clear: both }
