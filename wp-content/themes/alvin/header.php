@@ -12,6 +12,7 @@
 		<meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?>" />
 		<link rel="apple-touch-icon-precomposed" href="<?php echo of_get('app_icon'); ?>">
 		<?php } ?>
+        <link rel="shortcut icon" href="http://alvinwp.com/wp-content/themes/alvin/img/favicon.ico"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<?php wp_head(); echo of_get('headtext');?>
 	</head>
