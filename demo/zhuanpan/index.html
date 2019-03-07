@@ -19,18 +19,48 @@ img { border: 0 }
 #result .item p:last-child { margin-bottom: 0; }
 #result .item p .jz { font-size: 20px; font-weight: bold; color: #000; }
 #result .item p .cz, #result .item p .sq { font-weight: bold; color: #000; }
-#result .item a.btn { display: inline-block; height: 38px; width: 110px; font-weight: bold; line-height: 36px; color: #fff; font-size: 14px; background: #e9536a; border-radius: 3px; text-align: center; text-decoration: none; }
+#result .item a.btn { display: inline-block; height: 38px; width: 110px; font-weight: bold; line-height: 36px; color: #fff; font-size: 14px; background: #e9536a; border-radius: 30px; text-align: center; text-decoration: none; }
 #result .item a.btn:hover { background: #ef6177; }
 @media screen and (max-width: 767px) {
 h1 { text-align:center; margin:15px auto 10px;}
 #content { display: block; margin: 0 auto; padding: 15px; }
+
+#result .item p { font-size:14px; line-height:24px;}
+#result .item p .jz { font-size:18px; line-height:27px;}
+#result .item a.btn { height:36px; line-height:34px; width:100px; font-size:12px;}
+
 #result { display: block; margin: 0 auto; padding: 15px; width: 100%; }
 #result .item { min-width: 100%; }
 }
 </style>
 <script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/jQueryRotate.2.1.js"></script>
+<script type="text/javascript" src="js/fucRotate.min.js"></script>
 <script type="text/javascript" src="js/zhuanpan.min.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+//屏蔽键盘事件
+document.onkeydown = function (){
+var e = window.event || arguments[0];
+//F12
+if(e.keyCode == 123){
+return false;
+//Ctrl+Shift+I
+}else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
+return false;
+//Shift+F10
+}else if((e.shiftKey) && (e.keyCode == 121)){
+return false;
+//Ctrl+U
+}else if((e.ctrlKey) && (e.keyCode == 85)){
+return false;
+}
+};
+//屏蔽鼠标右键
+document.oncontextmenu = function (){
+return false;
+}
+}
+</script>
 </head>
 <body>
 <div id="mian">
