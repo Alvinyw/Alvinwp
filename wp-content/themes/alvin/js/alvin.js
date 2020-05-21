@@ -1,4 +1,27 @@
  $(function () {
+ 	// HEX 转为 RGBA：#000000 -> rgba(0,0,0,1)
+ 	function hexToRgba(hex, alpha) {
+ 		var c;
+ 		if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
+ 			c = hex.substring(1).split('');
+ 			if (c.length == 3) {
+ 				c = [c[0], c[0], c[1], c[1], c[2], c[2]];
+ 			}
+ 			c = '0x' + c.join('');
+ 			return 'rgba(' + [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(',') + ',' + alpha + ')';
+ 		}
+ 		throw new Error('Bad Hex');
+ 	}
+	 /* 设置主题色 */
+	 // 安全色：https://www.bootcss.com/p/websafecolors/
+ 	var webColor = ["#44cef6", "#00CC66", "#0000FF", "#9900FF", "#CC00FF"]
+	 document.body.style.setProperty("--themeColor", webColor[1])
+	 // 第二
+	 document.body.style.setProperty("--themeColorS", hexToRgba(webColor[1], 0.6))
+	 // 第三
+	 document.body.style.setProperty("--themeColorT", hexToRgba(webColor[1], 0.4))
+	 // 第四
+	 document.body.style.setProperty("--themeColorF", hexToRgba(webColor[1], 0.1))
  	/*toTop && sunNav-scroll-fixed*/
  	$("#toTop").hide();
  	$(window).scroll(function () {
@@ -167,15 +190,15 @@
  	}, 6000)
  });
 
-//  // 添加百度统计代码
-//  setTimeout(() => {
-//  	var _hmt = _hmt || []
-//  	// 每次执行前，先移除上次插入的代码
-//  	document.getElementById('baidu_js') && document.getElementById('baidu_js').remove()
-//  	var hm = document.createElement('script')
-//  	hm.src = "https://hm.baidu.com/hm.js?bc56cdf32315cd85609d16cc48d14b20";
-//  	hm.charset = 'UTF-8'
-//  	hm.id = 'baidu_js'
-//  	var s = document.getElementsByTagName('script')[0]
-//  	s.parentNode.insertBefore(hm, s)
-//  }, 0)
+ //  // 添加百度统计代码
+ //  setTimeout(() => {
+ //  	var _hmt = _hmt || []
+ //  	// 每次执行前，先移除上次插入的代码
+ //  	document.getElementById('baidu_js') && document.getElementById('baidu_js').remove()
+ //  	var hm = document.createElement('script')
+ //  	hm.src = "https://hm.baidu.com/hm.js?bc56cdf32315cd85609d16cc48d14b20";
+ //  	hm.charset = 'UTF-8'
+ //  	hm.id = 'baidu_js'
+ //  	var s = document.getElementsByTagName('script')[0]
+ //  	s.parentNode.insertBefore(hm, s)
+ //  }, 0)
