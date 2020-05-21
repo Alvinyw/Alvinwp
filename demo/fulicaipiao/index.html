@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中国福利彩票随机选号 - 双色球（6红1蓝）</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<style type="text/css">
+body, html { width: 100%; height: 100%; background-color: #f5f5f5; }
+* { margin: 0; padding: 0; }
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+h1 { margin: 0 auto 40px; text-align: center; }
+#main { width: 100%; max-width: 680px; padding: 15px; margin: 0 auto 80px; }
+#currentGrp { padding: 30px 0; border: 2px solid #aaa; border-radius: 10px; }
+#selectedGrp { text-align: center; }
+#selectedGrp li, #resultGrp span { display: inline-block; margin: 5px; width: 60px; height: 60px; font-size: 28px; line-height: 58px; text-align: center; background: #e70014; color: #fff; font-weight: bold; border: 1px solid #e70014; border-radius: 50%; box-shadow: 0 0 6px #e70014; }
+#selectedGrp li:last-child, #resultGrp span.blue { margin-left: 30px; background-color: #549fe0; border-color: #549fe0; box-shadow: 0 0 6px #549fe0; }
+#btnStart { display: block; margin: 40px auto; width: 100px; height: 100px; border-radius: 50%; color: #fff; font-size: 22px; font-weight: bold; background: #e70014; outline: none; border: none; cursor: pointer; opacity: 1; }
+#btnStart:hover { opacity: .8; }
+#resultGrp { margin-top: 40px; text-align: center; }
+#resultGrp .item { display: inline-block; padding: 20px; margin-bottom: 30px; width: 560px; height: 150px; border: 2px solid #aaa; border-radius: 10px; cursor: pointer; }
+#resultGrp .item:last-child { margin-bottom: 0; }
+#resultGrp .item.fixed { position: fixed; top: 50%; left: 50%; z-index: 1000; margin: -75px 0 0 -280px; padding: 40px 0; background: #fff; border: none; }
+#resultGrp .item.fixed h2 { display: none; }
+#mask { display: none; position: fixed; top: 0; left: 0; z-index:10; width: 100%; height: 100%; background: #000; opacity: .9; }
+#contentBtm { position: fixed; right: 1%; bottom: 1%; }
+#contentBtm a { margin-left:10px;  }
+#clearResults { display: inline-block; padding: 0 10px; height: 28px; line-height: 26px; background: #ddd; color: #444; font-size: 12px; text-align: center; cursor: pointer; border: solid 1px #aaa; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; opacity: 1; text-decoration: none; }
+#clearResults:hover { opacity: .8; }
+a.bluelink { font-size:12px; height: 28px; line-height: 26px; color: #50a8e1; text-decoration:none; }
+a.bluelink:hover { color: #61c2ec; }
+ @media screen and (max-width: 767px) {
+h1 { font-size: 24px; line-height: 36px; text-align: center; margin-bottom: 0; }
+#btnStart { margin: 20px auto; width: 60px; height: 60px; font-size: 16px; }
+#currentGrp { padding: 20px 0; }
+#selectedGrp li, #resultGrp span { margin: 2px; width: 40px; height: 40px; font-size: 22px; line-height: 38px; }
+#selectedGrp li:last-child, #resultGrp span.blue { margin-left: 20px; }
+#resultGrp { margin-top: 20px; }
+#resultGrp .item { width: 100%; height: 115px; padding: 15px 0; margin-bottom: 15px; }
+#resultGrp .item h2 { font-size: 16px; line-height: 28px; margin-bottom: 5px; }
+#resultGrp .item span { margin: 3px; }
+#resultGrp .item span.blue { margin-left:20px;}
+#resultGrp .item.fixed { height: 130px; left: 2%; width: 96%; margin-left: 0; }
+#resultGrp .item.fixed span { width: 45px; height: 45px; line-height: 43px; }
+}
+</style>
+</head>
+<body>
+<div id="main">
+    <h1>中国福利彩票随机选号<br/>双色球（6红1蓝）</h1>
+    <button id="btnStart">开始</button>
+    <div id="currentGrp">
+        <ul id="selectedGrp">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>1</li>
+        </ul>
+    </div>
+    <div id="resultGrp"> </div>
+</div>
+<div id="mask"></div>
+<div id="contentBtm"> <a class="bluelink" target="_blank" href="https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E7%A6%8F%E5%88%A9%E5%BD%A9%E7%A5%A8%E5%8F%8C%E8%89%B2%E7%90%83%E6%B8%B8%E6%88%8F%E8%A7%84%E5%88%99">中国福利彩票玩法</a> <a href="javascript:void()" id="clearResults">清空</a> <a class="bluelink" href="https://alvinwp.com/demo/tiyucaipiao/index.html">中国体育彩票</a> </div>
+<script>
+var redArray = new Array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33);
+var blueArray = new Array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16);
+var selectedRedArray = new Array();
+var selectedBlueArray = new Array();
+
+var ifStart = false;
+var StartRolling = null;
+var curIndex;
+var liGrp = $("#selectedGrp li");
+
+$("#btnStart").click(function(){
+	if(!ifStart){
+		ifStart = true;
+		$("#btnStart").html("停止");
+				
+		StartRolling = setInterval(function(){
+		selectedRedArray.splice(0,selectedRedArray.length);
+		selectedBlueArray.splice(0,selectedBlueArray.length);
+		for(var i=0;i<liGrp.length;i++){
+			
+			if(i!=liGrp.length-1){
+				var curValue = getUniqueValue(redArray,selectedRedArray);
+				liGrp.eq(i).html(curValue);
+				selectedRedArray.push(curValue);
+			}else{
+				var curValue = getUniqueValue(blueArray,selectedBlueArray);
+				liGrp.eq(i).html(curValue);
+				selectedBlueArray.push(curValue);
+			}
+			
+		}
+		
+		},50);	
+	
+	}else{
+		setTimeout(function(){
+			ifStart = false;
+			$("#btnStart").html("开始");
+			clearInterval(StartRolling);
+			arraySort(selectedRedArray);
+			
+			var itemNum = $("#resultGrp .item").length;
+			
+			var newItem = $('<div class="item">');		
+			var newItemStr = '<h2>第 '+ (itemNum+1) +' 组结果：</h2>';
+			for(var i=0;i<selectedRedArray.length;i++){
+				newItemStr += '<span>'+ selectedRedArray[i] +'</span>';
+			}
+			for(var i=0;i<selectedBlueArray.length;i++){
+				newItemStr += '<span class="blue">'+ selectedBlueArray[i] +'</span>';
+			}
+			
+			$(newItem).html(newItemStr);
+			$("#resultGrp").append(newItem);
+			
+			selectedRedArray.splice(0,selectedRedArray.length);
+			selectedBlueArray.splice(0,selectedBlueArray.length);
+			
+		},400);
+	}
+});
+
+$("body").on("click", "#resultGrp .item", function(){
+	$(this).addClass("fixed");
+	$("#mask").fadeIn();
+});
+
+$("#mask").click(function(){
+	$(this).fadeOut();
+	$("#resultGrp .item.fixed").removeClass("fixed");
+});
+
+$("#clearResults").click(function(){
+	window.location.reload();
+});
+
+function arraySort(arr){
+	for(var i=0;i<arr.length;i++){
+		for(var j=i+1;j<arr.length;j++){
+			if(arr[i]>arr[j]){
+				var temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+	}
+	return arr;
+}
+
+function getUniqueValue(array1,selectedArray){
+	if(selectedArray.length<array1.length){
+		for(var j=0;j>-1;j++){
+			curIndex = rnd(0,array1.length-1);
+			if(ifRepeat(selectedArray,array1[curIndex])){
+				return array1[curIndex];
+			}
+		}
+	}
+}
+
+function ifRepeat(array,str){
+	for(var i=0;i<array.length;i++){
+		if(array[i]==str){
+			return false;
+		}
+	}
+	return true;
+}
+	
+function rnd(n, m){
+	return Math.floor(Math.random()*(m-n+1)+n)
+}
+</script>
+</body>
+</html>

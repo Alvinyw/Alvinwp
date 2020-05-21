@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+/*一、背景色切换 Butto*/
+:root { font-size: 10px; }
+h1 { font-size:3.6em;}
+#bgSwitch nav ul { padding: 0; list-style-type: none; }
+#bgSwitch nav li { position: relative; width: 25rem; height: 7rem; font-size: 20px; text-align: center; line-height: 7rem; font-family: sans-serif; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; margin: 3rem; }
+#bgSwitch nav li::before, #bgSwitch nav li::after { content: ''; position: absolute; width: inherit; height: inherit; top: 0; left: 0; transition: 0.3s; }
+#bgSwitch nav li::before { background-color: white; z-index: -1; box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2); }
+#bgSwitch nav li::after { background-color: goldenrod; 
+	transform: translate(1.5rem, 1.5rem); 
+	z-index: -2; 
+}
+#bgSwitch nav li:hover { transform: translate(1.5rem, 1.5rem); color: white; }
+#bgSwitch nav li:hover::before { background-color: goldenrod; }
+#bgSwitch nav li:hover::after { background-color: white; transform: translate(-1.5rem, -1.5rem); }
+</style>
+</head>
+
+<body>
+<div id="bgSwitch" class="item">
+    <h1>三、背景色、前景色切换 Button</h1>
+    <nav>
+        <ul>
+            <li> Download </li>
+            <li> Try Online Demo </li>
+            <li> Download Free Trial </li>
+            <li> Get 30-Day Free Trial </li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>

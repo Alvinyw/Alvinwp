@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+/*loader*/
+#loader .loader {
+ width: 7.9em; height: 1.5em; font-size: 20px; display: flex; justify-content: space-between; }
+#loader .loader span { width: 1em; background-color: #fe8e14; border-radius: 0.1em; 
+	transform: skewX(-25deg) scale(0.1); 
+	animation: loader 0.8s infinite alternate; 
+	animation-delay: calc((var(--n) - 1) * 0.2s);
+	filter: opacity(0);
+}
+ @keyframes loader { to {
+ filter: opacity(1);
+ transform: skewX(-25deg) scale(1);
+}
+}
+.loader span:nth-child(1) { --n: 1;
+}
+.loader span:nth-child(2) { --n: 2;
+}
+.loader span:nth-child(3) { --n: 3;
+}
+.loader span:nth-child(4) { --n: 4;
+}
+.loader span:nth-child(5) { --n: 5;
+}
+.loader span:nth-child(6) { --n: 6;
+}
+.loader span:nth-child(7) { --n: 7;
+}
+</style>
+</head>
+
+<body>
+<div id="loader" class="item">
+    <h1>五、loader</h1>
+    <div class="loader"> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+/*一、气泡填充 Button*/
+#bubbleBtn ul { list-style-type: none; margin: 0; padding: 0; }
+#bubbleBtn ul li { position: relative; margin: 15px 0; width: 250px; height: 56px; font-size: 16px; line-height: 54px; color: #fe8e14; font-weight: bold; border: 2px solid #fe8e14; border-radius: 3px; font-family: sans-serif; text-align: center; text-transform: uppercase; overflow: hidden; z-index: 1; transition: 0.5s; cursor: pointer; }
+#bubbleBtn ul li span { position: absolute; width: 25%; height: 100%; background-color: #fe8e14; border-radius: 50%; z-index: -1;
+	left: calc((var(--n) - 1) * 25%);
+	transition: 0.5s; 
+	transition-delay: calc((var(--n) - 1) * 0.1s);
+	transform: translateY(100%);  
+}
+#bubbleBtn ul li span:nth-child(1) { --n: 1;
+}
+#bubbleBtn ul li span:nth-child(2) { --n: 2;
+}
+#bubbleBtn ul li span:nth-child(3) { --n: 3;
+}
+#bubbleBtn ul li span:nth-child(4) { --n: 4;
+}
+#bubbleBtn ul li.on, #bubbleBtn ul li:hover { color: #fff; }
+#bubbleBtn ul li.on span, #bubbleBtn ul li:hover span { transform: translateY(0) scale(2); }
+</style>
+</head>
+
+<body>
+<div id="bubbleBtn" class="item">
+    <h1>一、气泡填充 Button</h1>
+    <nav>
+        <ul>
+            <li> Download <span></span><span></span><span></span><span></span> </li>
+            <li> Try Online Demo <span></span><span></span><span></span><span></span> </li>
+            <li> Download Free Trial <span></span><span></span><span></span><span></span> </li>
+            <li> Get 30-Day Free Trial <span></span><span></span><span></span><span></span> </li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>

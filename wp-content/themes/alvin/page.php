@@ -11,6 +11,7 @@
 								endwhile;
 							?>
 						</article>
+						<?php wp_share();?>
 						    <?php if ( comments_open() || get_comments_number() ) {?>
 							<div id="qzhai_comments">
 								<?php comments_template(); ?>

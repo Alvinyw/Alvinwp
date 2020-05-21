@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>animation</title>
+<style>
+#main { margin:100px;}
+/*给这个按钮创建一个动名名称：buttonLight，然后在每个时间段设置不同的background,color来达到变色效果，改变box-shadow来达到发光效果*/
+  @-webkit-keyframes 'buttonLight' {
+     from {
+       background: rgba(96, 203, 27,0.5);
+       -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3) inset, 0 0 3px rgba(220, 120, 200, 0.5);
+       color: red;
+	   margin-top:0;
+     }
+     25% {
+       background: rgba(196, 203, 27,0.8);
+       -webkit-box-shadow: 0 0 10px rgba(255, 155, 255, 0.5) inset, 0 0 8px rgba(120, 120, 200, 0.8);
+       color: blue;
+	   margin-left:300px;
+    }
+    50% {
+      background: rgba(196, 203, 127,1);
+      -webkit-box-shadow: 0 0 5px rgba(155, 255, 255, 0.3) inset, 0 0 3px rgba(220, 120, 100, 1);
+      color: orange;
+	  margin-top:300px;
+    }
+    75% {
+      background: rgba(196, 203, 27,0.8);
+      -webkit-box-shadow: 0 0 10px rgba(255, 155, 255, 0.5) inset, 0 0 8px rgba(120, 120, 200, 0.8); 
+      color: black;
+	  margin-left:0;
+    }
+   to {
+     background: rgba(96, 203, 27,0.5);
+     -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3) inset, 0 0 3px rgba(220, 120, 200, 0.5);
+     color: green;
+	 margin-top:0;
+    }
+  }
+  a.btn {
+    /*按钮的基本属性*/
+	display:inline-block;
+    background: #fe8e14;
+    font-size: 16px;
+    padding: 0 25px;
+	height:42px;
+	line-height:40px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+    -moz-box-shadow: 0 0 5px rgba(255, 255, 255, 0.6) inset, 0 0 3px rgba(220, 120, 200, 0.8);
+    -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.6) inset, 0 0 3px rgba(220, 120, 200, 0.8);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6) inset, 0 0 3px rgba(220, 120, 200, 0.8);
+	
+    /*调用animation属性，从而让按钮在载入页面时就具有动画效果*/
+	-webkit-animation-name:'buttonLight';/*动画属性名，也就是我们前面keyframes定义的动画名*/ 
+	-webkit-animation-duration: 10s;/*动画持续时间*/
+	-webkit-animation-timing-function: ease-in-out; /*动画频率，和transition-timing-function是一样的*/ 
+	-webkit-animation-delay: 0;/*动画延迟时间*/ 
+	-webkit-animation-iteration-count: infinite;/*定义循环资料，infinite为无限次*/ 
+	-webkit-animation-direction: alternate;/*定义动画方式, alternate 为交替*/
+  }
+</style>
+</head>
+
+<body>
+<div id="main">
+ <a href="" class="btn">Try Online Demo</a>
+</div>
+</body>
+</html>

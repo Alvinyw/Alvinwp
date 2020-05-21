@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+html, body { /*background: linear-gradient(brown, sandybrown);*/ }
+.text { display:inline-block; font-size: 5em; font-family: "arial black"; position: relative; color: transparent; }
+.text::before, .text::after { content: attr(data-text); position: absolute; top: 0; left: 0; color: #fe8e14; transition: 0.2s; }
+
+.text::before { clip-path: polygon(0 0, 60% 0, 30% 100%, 0 100%); }
+.text::after { clip-path: polygon(60% 0, 100% 0, 100% 100%, 30% 100%); }
+
+.text:hover::before { left: -0.15em; transform: rotate(-5deg); top: -0.05em; }
+.text:hover::after { left: 0.15em; transform: rotate(5deg); top: 0.05em; }
+</style>
+</head>
+
+<body>
+<div id="bubbleBtn" class="item">
+    <h1>四、文字断开特效</h1>
+    <div class="text" data-text="Dynamsoft"></div>
+</div>
+</body>
+</html>
