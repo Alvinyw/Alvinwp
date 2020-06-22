@@ -15,6 +15,9 @@
         <link rel="shortcut icon" href="https://alvinwp.com/wp-content/themes/alvin/img/favicon.ico"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<?php wp_head(); echo of_get('headtext');?>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
+		
 	</head>
 	<body <?php if(of_get('bgimg')){ echo 'style="background-image: url('.of_get('bgimg').');"'; }?>  class="uk-height-1-1">
 		
